@@ -10,13 +10,13 @@
 
     <title>TODO MVC</title>
 
-    <script src="${mvc.contextPath}/webjars/jquery/1.11.0/dist/jquery.js"></script>
+    <script src="${pageContext.request.contextPath}/webjars/jquery/1.11.0/dist/jquery.js"></script>
 
-    <link href="${mvc.contextPath}/webjars/bootstrap/3.3.4/dist/css/bootstrap.css" rel="stylesheet">
-    <script src="${mvc.contextPath}/webjars/bootstrap/3.3.4/dist/js/bootstrap.js"></script>
+    <link href="${pageContext.request.contextPath}/webjars/bootstrap/3.3.4/dist/css/bootstrap.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/webjars/bootstrap/3.3.4/dist/js/bootstrap.js"></script>
 
-    <link href="${mvc.contextPath}/webjars/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.css" rel="stylesheet">
-    <script src="${mvc.contextPath}/webjars/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.js"></script>
+    <link href="${pageContext.request.contextPath}/webjars/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.css" rel="stylesheet">
+    <script src="${pageContext.request.contextPath}/webjars/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.js"></script>
 
   </head>
 
@@ -71,7 +71,7 @@
                   ${item.dueDate}
               </td>
               <td class="text-center">
-                <form action="${mvc.basePath}/items/delete" method="POST">
+                <form action="${pageContext.request.contextPath}/r/items/delete" method="POST">
                   <input type="hidden" name="id" value="${item.id}"/>
                   <input type="hidden" name="${mvc.csrf.name}" value="${mvc.csrf.token}"/>
                   <button type="submit" class="btn btn-danger">
@@ -84,7 +84,7 @@
         </tbody>
       </table>
 
-      <form action="${mvc.basePath}/items/create"
+      <form action="${pageContext.request.contextPath}/r/items/create"
             method="POST" class="form-inline">
 
         <div class="form-group">
